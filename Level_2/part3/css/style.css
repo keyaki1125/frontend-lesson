@@ -110,6 +110,7 @@ Main
     line-height: 1.9;
 }
 
+/* オーダーテーブル */
 #item .item-info .order-table {
     width: 100%;
     margin-bottom: 20px;
@@ -133,7 +134,76 @@ Main
     text-align: center;
 }
 
+#item .item-info .order-table td {
+    border-top: solid 1px #c3c3c3;
+}
+
 #item .item-info .order-table th:last-child,
 #item .item-info .order-table td:last-child {
     border-right: none;
+}
+
+#item .item-info .order-table select {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+    width: 100%;
+    border: solid 1px #c3c3c3;
+    padding: 0 10px;
+
+}
+
+/* カートボタン */
+#item .item-info .cart-btn {
+    display: block;
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 18px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+}
+
+/* サイズチャート */
+#item .item-info .size-table {
+    width: 100%;
+    border-top: solid 1px #c3c3c3;
+    border-left: solid 1px #c3c3c3;
+}
+
+#item .item-info .size-table .size {
+    width: 16%;
+}
+
+#item .item-info .size-table .chest,
+#item .item-info .size-table .weist,
+#item .item-info .size-table .height {
+    width: 28%;
+}
+
+#item .item-info .size-table th,
+#item .item-info .size-table td {
+    font-weight: normal;
+    padding: 10px;
+    border-right: solid 1px #c3c3c3;
+    border-bottom: solid 1px #c3c3c3;
+    text-align: center;
+}
+
+#item .item-info .size-table th {
+    background-color: #ecebeb;
+}
+
+/* --------------------------
+
+Footer
+
+-------------------------- */
+#footer {
+    padding: 10px;
+}
+
+#footer .copyright {
+    font-size: 0.625rem;
+    text-align: center;
 }
