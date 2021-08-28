@@ -63,7 +63,8 @@ Header
     justify-content: space-between;
 }
 
-#header nav .menu, #header nav .login {
+#header nav .menu, 
+#header nav .login {
     display: flex;
     align-items: center;
 }
@@ -94,6 +95,10 @@ Main
     margin-right: 60px;
 }
 
+/*
+「display: flex;」と「align-items: center;」で、
+高さを中央にそろえる
+*/
 #item .item-info .item-title {
     height: 60px;
     display: flex;
@@ -125,7 +130,17 @@ Main
     width: 60%;
 }
 
+/*
+テーブルの線は重ならないように設定（外枠なしのレイアウト）
+１．tdの上を設定
+*/
+#item .item-info .order-table td {
+    border-top: solid 1px #c3c3c3;
+}
 
+/*
+２．th、tdの右を設定
+*/
 #item .item-info .order-table th,
 #item .item-info .order-table td {
     font-weight: normal;
@@ -134,15 +149,19 @@ Main
     text-align: center;
 }
 
-#item .item-info .order-table td {
-    border-top: solid 1px #c3c3c3;
-}
-
+/*
+３．th、tdの最後だけ右の線を消す
+*/
 #item .item-info .order-table th:last-child,
 #item .item-info .order-table td:last-child {
     border-right: none;
 }
 
+/*
+-moz-appearance: menulist;
+-webkit-appearance: menulist;
+セレクトボックスに右端の矢印を表示
+*/
 #item .item-info .order-table select {
     -moz-appearance: menulist;
     -webkit-appearance: menulist;
@@ -165,6 +184,10 @@ Main
 }
 
 /* サイズチャート */
+/*
+テーブルの線は重ならないように設定（外枠ありのレイアウト）
+１．テーブルの上と左に設定
+*/
 #item .item-info .size-table {
     width: 100%;
     border-top: solid 1px #c3c3c3;
@@ -181,6 +204,9 @@ Main
     width: 28%;
 }
 
+/*
+２．th、tdの右と下に設定
+*/
 #item .item-info .size-table th,
 #item .item-info .size-table td {
     font-weight: normal;
@@ -206,4 +232,35 @@ Footer
 #footer .copyright {
     font-size: 0.625rem;
     text-align: center;
+}
+
+
+@media screen and (max-width: 896px) {
+    #header {
+        margin: 0 auto;
+        border-bottom: none;
+        padding: 36px 16px 16px 16px;
+    }
+
+    .site-title {
+        margin-bottom: 26px;
+    }
+
+    nav {
+        overflow-x: scroll;  /* 横軸に収まらない部分があるときはスクロールバーを表示 */
+    }
+
+    #item {
+        flex-direction: column;
+    }
+
+    #item .item-img {
+        max-width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    #item .item-info {
+        padding: 0 16px;
+    }
+
 }
